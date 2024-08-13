@@ -60,6 +60,14 @@ function M.apply(config)
     -- Startup behavior
     wezterm.on("gui-startup", function()
         local tab, pane, window = wezterm.mux.spawn_window({})
+-- make the window positioned in the bottom left of the main display
+window:set_position(wezterm.rect {
+    x = 0,
+    y = 0,
+    width = 0.5,
+    height = 0.5
+})
+
     end)
 end
 
