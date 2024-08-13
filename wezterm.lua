@@ -39,6 +39,13 @@ config.keys = {{
     key = "RightArrow",
     mods = "SHIFT|SUPER",
     action = wezterm.action.ActivateTabRelative(1)
+},
+{
+    key = ",",
+    mods = "CMD",
+    action = wezterm.action{SpawnCommandInNewWindow = {
+        args = {"/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code", wezterm.config_dir}
+    }}
 }}
 
 -- macOS specific key bindings
